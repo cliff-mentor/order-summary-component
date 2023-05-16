@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background: url('./images/pattern-background-desktop.svg') repeat-x hsl(225, 100%, 94%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 2px 30px hsla(0, 0%, 80%, 0.5);
+  width: 400px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__image img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.container__content {
+  padding: 10px 40px;
+}
+
+.container__content h2 {
+  text-align: center;
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.container__content p {
+  text-align: center;
+  color: hsl(224, 23%, 55%);
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.content__plan {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 10px;
+}
+
+.plan__actual {
+  display: flex;
+}
+
+.plan__actual img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.actual__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px 0;
+}
+
+.actual__info em {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size: 15px;
+  font-style: normal;
+}
+
+.actual__info p {
+  margin: 0;
+}
+
+.plan__change a {
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.plan__change a:hover {
+  color: hsl(245, 83%, 68%);
+  text-decoration: none;
+}
+
+.container__payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px 0;
+  padding: 20px 40px;
+}
+
+.container__payment a {
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.--proceed {
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+
+.--proceed:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.--cancel {
+  color: hsl(224, 23%, 55%);
+}
+
+.--cancel:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background: url('./images/pattern-background-mobile.svg') no-repeat hsl(225, 100%, 94%);
+    background-size: contain;
+  }
+
+  .container {
+    width: 300px;
+	min-width: 300px;
+  }
+
+  .container__content {
+    padding: 10px 22px;
+  }
+
+  .content__plan {
+    padding: 15px 20px;
+  }
+
+  .actual__info em,
+  .actual__info p {
+    font-size: 13px;
+  }
+
+  .plan__change a {
+    font-size: 12px;
+  }
+
+  .container__payment {
+    padding: 10px 30px 15px;
+  }
+}
